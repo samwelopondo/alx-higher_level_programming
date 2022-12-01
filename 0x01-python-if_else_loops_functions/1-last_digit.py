@@ -2,8 +2,6 @@
 import random
 number = random.randint(-10000, 10000)
 num = str(number)
-print(number)
-print(num[-1])
 
 if int(num[-1]) > 5:
     var = "and is greater than 5"
