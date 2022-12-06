@@ -1,19 +1,33 @@
 #!/usr/bin/python3
 
-
 def add_tuple(tuple_a=(), tuple_b=()):
-    if (tuple_a is None):
-        tuple_a = ()
-    if (tuple_b is None):
-        tuple_b = ()
-    sum = [0, 0]
-    for i in range(2):
-        try:
-            sum[i] += tuple_a[i]
-        except Exception as e:
-            sum[i] += 0
-        try:
-            sum[i] += tuple_b[i]
-        except Exception as e:
-            sum[i] += 0
-    return (sum[0], sum[1])
+    a = tuple_a
+    b = tuple_b
+
+    list_a = list(a)
+    list_b = list(b)
+    result = ()
+    if len(list_a) == 0:
+        list_a = [0, 0]
+
+    if len(list_a) == 1:
+        list_a.append(0)
+
+    if len(list_a) > 2:
+        list_a = list_a[:2]
+
+    if len(list_b) == 0:
+        list_b = [0, 0]
+
+    if len(list_b) == 1:
+        list_b.append(0)
+
+    if len(list_b) > 2:
+        list_b = list_b[:2]
+
+    a = tuple(list_a)
+    b = tuple(list_b)
+    for c, d in zip(a, b):
+        sumw = ((c + d),)
+        result += sumw
+    return result
