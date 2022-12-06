@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-print_reversed_list_integer = __import__('3-print_reversed_list_integer').print_reversed_list_integer
+multiple_returns = __import__('8-multiple_returns').multiple_returns
 
-list = [98, 5, 6, 0]
-print_reversed_list_integer(list)
+sentence = ""
+length, first = multiple_returns(sentence)
+print("Length: {:d} - First character: {}".format(length, first))
+
