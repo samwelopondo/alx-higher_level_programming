@@ -14,4 +14,4 @@ def print_sorted_dictionary(a_dictionary):
             result[lisp[i]] = items[i][1]
 
         for k, v in result.items():
-            print(k, v)
+            print("{:s} {}".format(k, v))
