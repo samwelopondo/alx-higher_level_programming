@@ -26,6 +26,7 @@ void printList() {
    printf(" ]");
 }
 
+
 //insert link at the first location
 void insertFirst(int key, int data) {
    //create a link
